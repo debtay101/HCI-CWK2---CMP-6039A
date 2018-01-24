@@ -2,15 +2,9 @@
 //! locale : Basque [eu]
 //! author : Eneko Illarramendi : https://github.com/eillarra
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var eu = moment.defineLocale('eu', {
+export default moment.defineLocale('eu', {
     months : 'urtarrila_otsaila_martxoa_apirila_maiatza_ekaina_uztaila_abuztua_iraila_urria_azaroa_abendua'.split('_'),
     monthsShort : 'urt._ots._mar._api._mai._eka._uzt._abu._ira._urr._aza._abe.'.split('_'),
     monthsParseExact : true,
@@ -61,6 +55,3 @@ var eu = moment.defineLocale('eu', {
     }
 });
 
-return eu;
-
-})));

@@ -2,14 +2,8 @@
 //! locale : Kyrgyz [ky]
 //! author : Chyngyz Arystan uulu : https://github.com/chyngyz
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
 
-
+import moment from '../moment';
 
 var suffixes = {
     0: '-чү',
@@ -34,7 +28,7 @@ var suffixes = {
     100: '-чү'
 };
 
-var ky = moment.defineLocale('ky', {
+export default moment.defineLocale('ky', {
     months : 'январь_февраль_март_апрель_май_июнь_июль_август_сентябрь_октябрь_ноябрь_декабрь'.split('_'),
     monthsShort : 'янв_фев_март_апр_май_июнь_июль_авг_сен_окт_ноя_дек'.split('_'),
     weekdays : 'Жекшемби_Дүйшөмбү_Шейшемби_Шаршемби_Бейшемби_Жума_Ишемби'.split('_'),
@@ -82,7 +76,3 @@ var ky = moment.defineLocale('ky', {
         doy : 7  // The week that contains Jan 1st is the first week of the year.
     }
 });
-
-return ky;
-
-})));

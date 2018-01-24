@@ -3,13 +3,7 @@
 //! author : Nedim Cholich : https://github.com/frontyard
 //! based on (hr) translation by Bojan Marković
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 function translate(number, withoutSuffix, key) {
     var result = number + ' ';
@@ -64,7 +58,7 @@ function translate(number, withoutSuffix, key) {
     }
 }
 
-var bs = moment.defineLocale('bs', {
+export default moment.defineLocale('bs', {
     months : 'januar_februar_mart_april_maj_juni_juli_august_septembar_oktobar_novembar_decembar'.split('_'),
     monthsShort : 'jan._feb._mar._apr._maj._jun._jul._aug._sep._okt._nov._dec.'.split('_'),
     monthsParseExact: true,
@@ -137,7 +131,3 @@ var bs = moment.defineLocale('bs', {
         doy : 7  // The week that contains Jan 1st is the first week of the year.
     }
 });
-
-return bs;
-
-})));

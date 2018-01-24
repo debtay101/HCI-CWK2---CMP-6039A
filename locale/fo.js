@@ -2,15 +2,9 @@
 //! locale : Faroese [fo]
 //! author : Ragnar Johannesen : https://github.com/ragnar123
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var fo = moment.defineLocale('fo', {
+export default moment.defineLocale('fo', {
     months : 'januar_februar_mars_apríl_mai_juni_juli_august_september_oktober_november_desember'.split('_'),
     monthsShort : 'jan_feb_mar_apr_mai_jun_jul_aug_sep_okt_nov_des'.split('_'),
     weekdays : 'sunnudagur_mánadagur_týsdagur_mikudagur_hósdagur_fríggjadagur_leygardagur'.split('_'),
@@ -55,6 +49,3 @@ var fo = moment.defineLocale('fo', {
     }
 });
 
-return fo;
-
-})));

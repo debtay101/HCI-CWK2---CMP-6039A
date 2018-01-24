@@ -2,13 +2,7 @@
 //! locale : Croatian [hr]
 //! author : Bojan Marković : https://github.com/bmarkovic
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 function translate(number, withoutSuffix, key) {
     var result = number + ' ';
@@ -63,7 +57,7 @@ function translate(number, withoutSuffix, key) {
     }
 }
 
-var hr = moment.defineLocale('hr', {
+export default moment.defineLocale('hr', {
     months : {
         format: 'siječnja_veljače_ožujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca'.split('_'),
         standalone: 'siječanj_veljača_ožujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac'.split('_')
@@ -139,7 +133,3 @@ var hr = moment.defineLocale('hr', {
         doy : 7  // The week that contains Jan 1st is the first week of the year.
     }
 });
-
-return hr;
-
-})));
