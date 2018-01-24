@@ -1,0 +1,33 @@
+\begin{thebibliography}{}
+
+\bibitem[Consortium et~al., 2008]{world2008web}
+Consortium, W. W.~W. et~al. (2008).
+\newblock Web content accessibility guidelines (wcag) 2.0.
+
+\bibitem[Leavitt and Shneiderman, 2006]{leavitt2006based}
+Leavitt, M.~O. and Shneiderman, B. (2006).
+\newblock Based web design \& usability guidelines.
+
+\bibitem[Lee and Kozar, 2012]{lee2012understanding}
+Lee, Y. and Kozar, K.~A. (2012).
+\newblock Understanding of website usability: Specifying and measuring
+  constructs and their relationships.
+\newblock {\em Decision support systems}, 52(2):450--463.
+
+\bibitem[Nielsen, 2000]{DBLP:books/lib/Nielsen00}
+Nielsen, J. (2000).
+\newblock {\em Designing web usability}.
+\newblock New Riders Publ.
+
+\bibitem[Petrie et~al., 2004]{petrie2004tension}
+Petrie, H., Hamilton, F., and King, N. (2004).
+\newblock Tension, what tension?: Website accessibility and visual design.
+\newblock In {\em Proceedings of the 2004 international cross-disciplinary
+  workshop on Web accessibility (W4A)}, pages 13--18. ACM.
+
+\bibitem[Rogers et~al., 2011]{rogers2011interaction}
+Rogers, Y., Sharp, H., and Preece, J. (2011).
+\newblock {\em Interaction design: beyond human-computer interaction}.
+\newblock John Wiley \& Sons.
+
+\end{thebibliography}
