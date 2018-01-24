@@ -1,0 +1,338 @@
+body{
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("pic1.jpg");
+  background-repeat: no-repeat;
+  font-family: arial;
+}
+
+.nav{
+    border:1px solid #fff;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+    font-size: 30px;
+
+}
+
+
+li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 200px;
+}
+
+li a:hover {
+  font-size: 30px;
+  background: black;
+}
+
+
+.searchbox{
+  width: 700px;
+  height: 350px;
+  background: grey;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
+.avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+h1 {
+  font-size: 100px;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  top: 10px;
+  position: relative;
+}
+
+h2{
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.searchbox p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 40pt;
+}
+
+.searchbox input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.searchbox input[type="text"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  top: 100px;
+  width: 500px;
+  position: absolute;
+  left: calc(50% - 250px);
+  height: 40px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.searchbox input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 200px;
+  top: 175px;
+  background: #b2b5ba;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 20px;
+  left: calc(50% - 100px);
+  position: absolute;
+}
+
+.searchbox button{
+  border: none;
+  outline: none;
+  height: 50px;
+  top: 250px;
+  width: 300px;
+  background: #b2b5ba;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 20px;
+  left: calc(50% - 150px);
+  position: absolute;
+}
+.arrow{
+    position:relative;
+    top:540px;
+    left:725px;
+}
+.arrowBus{
+    position:relative;
+    top:530px;
+    left:750px;
+}
+.arrowRightBus{
+  position:relative;
+  top:610px;
+  left:75px;
+}
+#Overlaytext{
+  color: #fff;
+  position: fixed;
+  top: 620px;
+  left: 1450px;
+  font-size: 20pt;
+  text-align: center;
+}
+.arrowRight{
+  position:relative;
+  top:610px;
+  left:75px;
+}
+#OverlaytextLeftBus{
+  color: #fff;
+  position: fixed;
+  top: 700px;
+  left: 150px;
+  font-size: 20pt;
+}
+#OverlaytextLeft{
+  color: #fff;
+  position: fixed;
+  top: 700px;
+  left: 150px;
+  font-size: 20pt;
+}
+#ATCOCodeLink{
+  color: #fff;
+  position: fixed;
+  top: 875px;
+  left: 850px;
+  font-size: 30px;
+}
+.oval{
+  position:relative;
+  top:175px;
+  left:925px;
+}
+#OverlaytextOval{
+  color: #fff;
+  position: fixed;
+  top: 300px;
+  left: 900px;
+  font-size: 24px;
+}
+
+.infobox{
+  width: 700px;
+  height: 300px;
+  background: grey;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  padding: 0px 30px;
+  font-size: 32px;
+  text-align: center;
+
+}
+
+.infobox button{
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 200px;
+  background: #b2b5ba;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  left: calc(50% - 100px);
+  position: absolute;
+}
+
+#OverlaytextHome{
+  color: #fff;
+  position: fixed;
+  top: 950px;
+  left: 650px;
+  font-size: 24px;
+}
+
+#overlay button{
+  top: 1000px;
+  left: 750px;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 200px;
+  background: #b2b5ba;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  left: calc(50% - 100px);
+  position: absolute;
+}
+
+.train_results{
+  top: 850px;
+  width: 500px;
+  height: 250px;
+  left: calc(50% - 250px);
+  color: #fff;
+  position: absolute;
+  text-align: left;
+  font-size: 24px;
+}
+#train-results li{
+  list-style-type: none;
+}
+.bus_results{
+  top: 850px;
+  width: 500px;
+  height: 250px;
+  left: calc(50% - 250px);
+  color: #fff;
+  position: absolute;
+  text-align: left;
+  font-size: 24px;
+}
+#bus-results li{
+  list-style-type: none;
+}
+.infoboxTaxi{
+  width: 700px;
+  height: 1400px;
+  background: grey;
+  color: #fff;
+  top: 1050px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  padding: 0px 30px;
+  font-size: 32px;
+  text-align: center;
+
+}
+.infoboxTaxi button{
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 200px;
+  background: #b2b5ba;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  top: 290px;
+  left: calc(50% - 100px);
+  position: absolute;
+}
+
+.taximap{
+  top: 750px;
+  position: absolute;
+  left: calc(50% - 300px);
+}
+.infoboxTaxi ul{
+  top:900px;
+  left: 8%;
+  position: absolute;
+  text-align: center;
+  list-style-type:none;
+}
+
+.inforboxTaxih2{
+  top: 875px;
+  position: absolute;
+  left:35%;
+  text-align: center;
+}
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+}

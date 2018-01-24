@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Taxi</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+</head>
+
+<body>
+  <h1>Taxi Information</h1>
+  <ul class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="train.html">Train</a></li>
+    <li><a href="bus.html">Bus</a></li>
+    <li><a href="taxi.html">Taxi</a></li>
+  </ul>
+  <div id="overlay" onclick="off()">
+    <button onclick="imageChange()">Accesibility Mode</button>
+    <div id="OverlaytextHome">
+    To change the current webpage into "Accessibility Mode", please click on the button below:
+    </div>
+    <span class="oval"><img src="css/oval.png"></span>
+    <div id="OverlaytextOval">
+      Please click on one of the circled links to navigate the site
+    </div>
+  </div>
+
+<div class = "infoboxTaxi">
+    <button onclick="on()">Help/Accesibility</button>
+<p>Please see a Google Map below of all Taxi Services in the Surrounding Area,</p>
+<p>Please click on one of the options on the map below to get started, or please browse the list!</p>
+<br>
+<div class = "inforboxTaxih2">
+<h2>Taxi Contact Details</h2>
+</div>
+<ul>
+  <li>ABC Taxis: 01603 666333</li>
+  <hr>
+  <li>Green Frog Cab Co.: 01603 744747</li>
+  <hr>
+  <li>A2B Taxis Norwich: 01603 552324</li>
+  <hr>
+  <li>Loyal Taxis: 01603 444555</li>
+  <hr>
+  <li>Five Star Taxis Ltd: 01603 555555</li>
+  <hr>
+</ul>
+</div>
+<div class = "taximap">
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d38745.57008549745!2d1.2998534872553025!3d52.631105982070274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sTaxi+Norwich!5e0!3m2!1sen!2suk!4v1516549839482" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+</body>
+<script>
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+function imageChange() {
+  document.body.style.backgroundImage = "url('css/background1.png')";
+}
+
+</script>
+</html>

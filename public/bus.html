@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>Bus</title>
+</head>
+<body>
+  <ul class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="train.html">Train</a></li>
+    <li><a href="bus.html">Bus</a></li>
+    <li><a href="taxi.html">Taxi</a></li>
+  </ul>
+
+<div class = "searchbox">
+  <img src = "css/avatar.jpg" class="avatar">
+  <form id="target">
+    <input id="stop-name" type="text" placeholder="Enter Stop Code">
+    <input type="submit" value="Go">
+  </form>
+  <button onclick="on()">Help/Accessibility</button>
+</div>
+
+
+  <h1>Bus Information</h1>
+
+  <div id="overlay" onclick="off()">
+    <button onclick="imageChange()">Accesibility Mode</button>
+    <div id="OverlaytextHome">
+    To change the current webpage into "Accessibility Mode", please click on the button below:
+    </div>
+    <span class="oval"><img src="css/oval.png"></span>
+    <div id="OverlaytextOval">
+      Please click on one of the circled links to navigate the site
+    </div>
+    <span class="arrowBus"><img src="css/arrow.png"></span>
+    <span class="arrowRightBus"><img src="css/arrowRight.png"></span>
+  <div id="Overlaytext">
+    Please enter an ATCO code in here such as '2900W5854' for Wymondham
+  </div>
+  <div id="OverlaytextLeftBus">
+    Then please press go to display a list of results from the stop
+  </div>
+  <div id="ATCOCodeLink">
+    Please click <a href="https://www.openstreetmap.org/node/562729188"style="color: #fff"><b>HERE</b></a> for a list of ATCO Codes
+  </div>
+  </div>
+
+  <div class = "bus_results">
+  <ul id="bus-results">
+
+  </ul>
+</div>
+</body>
+<script>
+$("#target").submit(function (event) {
+  event.preventDefault();
+  var name = $("#stop-name").val();
+  $.ajax({
+    type: "GET",
+    url: "API/bus/" + name,
+    success: function(response) {
+      var list = $("#bus-results")
+      list.empty();
+        response.forEach(function(f) {
+          list.append('<li>' + '<b>Operator: </b> ' + f.operator_name + '</li>')
+          list.append('<li>' + '<b>Direction: </b>' + f.direction + '</li>')
+          list.append('<li>' + '<b>Departure Time: </b> ' + f.aimed_departure_time + '</li>')
+          list.append('<li>' + '<b>Line Number: </b> ' + f.line + '</li>')
+          list.append('<li>' + '<b>Direction: </b> ' + f.dir + '</li>')
+          list.append('<li>' + '<hr>' + '</li>')
+      });
+    }
+  });
+});
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+function imageChange() {
+  document.body.style.backgroundImage = "url('css/background1.png')";
+}
+</script>
+
+</html>

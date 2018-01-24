@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>Train</title>
+</head>
+<body>
+  <ul class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="train.html">Train</a></li>
+    <li><a href="bus.html">Bus</a></li>
+    <li><a href="taxi.html">Taxi</a></li>
+  </ul>
+
+<div class = "searchbox">
+  <img src = "css/avatar.jpg" class="avatar">
+  <form id="target">
+    <input id="station-name" type="text" placeholder="Enter Station Code">
+    <input type="submit" value="Go">
+  </form>
+  <button onclick="on()">Help/Accessibility</button>
+</div>
+
+  <h1>Train Information</h1>
+
+<div id="overlay" onclick="off()">
+  <button onclick="imageChange()">Accesibility Mode</button>
+  <div id="OverlaytextHome">
+  To change the current webpage into "Accessibility Mode", please click on the button below:
+  </div>
+  <span class="oval"><img src="css/oval.png"></span>
+  <div id="OverlaytextOval">
+    Please click on one of the circled links to navigate the site
+  </div>
+  <span class="arrow"><img src="css/arrow.png"></span>
+  <span class="arrowRight"><img src="css/arrowRight.png"></span>
+<div id="Overlaytext">
+  Please enter a station code in here such as 'NRW' for Norwich
+</div>
+<div id="OverlaytextLeft">
+  Then please press go to display a list of results from the station
+</div>
+</div>
+
+  <div class = "train_results">
+    <ul id="train-results">
+    </ul>
+  </div>
+
+</body>
+<script>
+$("#target").submit(function (event) {
+  event.preventDefault();
+  var name = $("#station-name").val();
+  $.ajax({
+    type: "GET",
+    url: "api/train/" + name,
+    success: function(response) {
+      var list = $("#train-results")
+      list.empty();
+      response.forEach(function(e) {
+        list.append('<li>' + '<b>Operator: </b> ' + e.operator_name + '</li>')
+        list.append('<li>' + '<b>Departure: </b>' + e.aimed_departure_time + '</li>')
+        list.append('<li>' + '<b>From:</b> ' + e.origin_name + '</li>')
+        list.append('<li>' + '<b>To:</b> ' + e.destination_name + '</li>')
+        list.append('<li>' + '<b>Platform:</b> ' + e.platform + '</li>')
+        list.append('<li>' + '<hr>' + '</li>')
+      });
+    }
+  });
+});
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+function imageChange() {
+  document.body.style.backgroundImage = "url('css/background1.png')";
+}
+</script>
+</html>

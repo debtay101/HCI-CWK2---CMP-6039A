@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Transport+</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+</head>
+
+<body>
+  <h1>Welcome to Transport+</h1>
+  <ul class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="train.html">Train</a></li>
+    <li><a href="bus.html">Bus</a></li>
+      <li><a href="taxi.html">Taxi</a></li>
+  </ul>
+
+
+
+
+
+  <div id="overlay" onclick="off()">
+      <button onclick="imageChange()">Accesibility Mode</button>
+  <div id="OverlaytextHome">
+  To change the current webpage into "Accessibility Mode", please click on the button below:
+  </div>
+  <span class="oval"><img src="css/oval.png" alt = "oval"></span>
+  <div id="OverlaytextOval">
+    Please click on one of the circled links to navigate the site
+  </div>
+  </div>
+<div class = "infobox">
+<p>Welcome to Transport+, the site for all your travel information around the UK!</p>
+<p>Please click on one of the options above to get started!</p>
+<button onclick="on()">Help/Accessibility</button>
+</div>
+
+</body>
+<script>
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+function imageChange() {
+  document.body.style.backgroundImage = "url('css/background1.png')";
+}
+
+</script>
+</html>
